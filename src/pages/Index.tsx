@@ -7,6 +7,7 @@ import ServicesSection from "@/components/ServicesSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import IndustriesSection from "@/components/IndustriesSection";
 import WhySquaiSection from "@/components/WhySquaiSection";
+import SquadSection from "@/components/SquadSection";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
 
