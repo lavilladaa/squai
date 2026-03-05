@@ -49,6 +49,10 @@ export const content = {
           es: ["Análisis de cuellos de botella", "Mapa de oportunidades de IA", "Informe escrito", "Presentación de resultados"],
         },
         popular: false,
+        pricePrefix: { en: "", es: "" },
+        price: "$1,500",
+        priceNote: { en: "Fixed price. No surprises.", es: "Precio fijo. Sin sorpresas." },
+        squadAssigned: { en: "2 of 6 squad members", es: "2 de 6 miembros del squad" },
       },
       {
         label: { en: "Tier 2", es: "Nivel 2" },
@@ -59,6 +63,10 @@ export const content = {
           es: ["3–5 procesos mapeados", "3–5 SOPs entregados", "Hasta 3 implementaciones de IA", "1 semana de soporte"],
         },
         popular: true,
+        pricePrefix: { en: "From", es: "Desde" },
+        price: "$5,500",
+        priceNote: { en: "Final price defined after discovery call.", es: "Precio final definido después de la llamada de diagnóstico." },
+        squadAssigned: { en: "4 of 6 squad members", es: "4 de 6 miembros del squad" },
       },
       {
         label: { en: "Tier 3", es: "Nivel 3" },
@@ -69,6 +77,10 @@ export const content = {
           es: ["8–10 procesos mapeados", "8–10 SOPs", "Hasta 8 implementaciones de IA", "Capacitación del equipo", "2 semanas de soporte"],
         },
         popular: false,
+        pricePrefix: { en: "From", es: "Desde" },
+        price: "$12,000",
+        priceNote: { en: "Final price defined after discovery call.", es: "Precio final definido después de la llamada de diagnóstico." },
+        squadAssigned: { en: "Full squad · All 6 members", es: "Squad completo · Los 6 miembros" },
       },
     ],
     cta: { en: "Get Started", es: "Comenzar" },
@@ -117,6 +129,69 @@ export const content = {
           en: "Our goal is to give your team the processes, tools, and confidence to run without us.",
           es: "Nuestro objetivo es darte los procesos, herramientas y confianza para funcionar sin nosotros.",
         },
+      },
+    ],
+  },
+  squad: {
+    title: { en: "Meet Your Squad", es: "Conoce a tu Squad" },
+    sub: {
+      en: "Every engagement assigns the right people to your specific needs. You're never handed off to a junior — this is the team.",
+      es: "Cada proyecto asigna las personas correctas según tus necesidades. Nunca te pasamos a un junior — este es el equipo.",
+    },
+    members: [
+      {
+        role: { en: "Operations Strategist", es: "Estratega de Operaciones" },
+        specialty: { en: "Engagement Lead", es: "Líder de Proyecto" },
+        desc: {
+          en: "Your main point of contact. Leads the engagement, owns the client relationship, and drives strategic direction from discovery to delivery.",
+          es: "Tu punto de contacto principal. Lidera el proyecto, gestiona la relación y define la dirección estratégica desde el diagnóstico hasta la entrega.",
+        },
+        tiers: ["Tier 1", "Tier 2", "Tier 3"],
+      },
+      {
+        role: { en: "AI Engineer", es: "Ingeniero de IA" },
+        specialty: { en: "Automation Specialist", es: "Especialista en Automatización" },
+        desc: {
+          en: "Builds and configures the AI tools, automations, and integrations identified during the engagement. Custom implementations — not off-the-shelf advice.",
+          es: "Construye y configura las herramientas de IA, automatizaciones e integraciones identificadas. Implementaciones a medida — no consejos genéricos.",
+        },
+        tiers: ["Tier 2", "Tier 3"],
+      },
+      {
+        role: { en: "Business Process Analyst", es: "Analista de Procesos de Negocio" },
+        specialty: { en: "Workflow & Strategy Lead", es: "Líder de Flujos y Estrategia" },
+        desc: {
+          en: "Maps your real workflows, identifies bottlenecks, and aligns every process improvement to your actual business goals — not just what looks broken on the surface.",
+          es: "Mapea tus flujos reales, identifica cuellos de botella y alinea cada mejora de proceso con tus objetivos reales de negocio.",
+        },
+        tiers: ["Tier 1", "Tier 2", "Tier 3"],
+      },
+      {
+        role: { en: "Knowledge Manager", es: "Gestor de Conocimiento" },
+        specialty: { en: "Documentation & Systems Lead", es: "Líder de Documentación y Sistemas" },
+        desc: {
+          en: "Ensures all processes, SOPs, and documentation are clear, structured, and accessible across your team's tools — so knowledge stays in systems, not in people's heads.",
+          es: "Garantiza que todos los procesos, SOPs y documentación sean claros, estructurados y accesibles en las herramientas de tu equipo — para que el conocimiento viva en sistemas, no en cabezas.",
+        },
+        tiers: ["Tier 2", "Tier 3"],
+      },
+      {
+        role: { en: "Data Analyst", es: "Analista de Datos" },
+        specialty: { en: "Metrics & ROI Lead", es: "Líder de Métricas y ROI" },
+        desc: {
+          en: "Translates your operations into numbers. Measures efficiency baselines, estimates time savings, and tracks the real ROI of every process and AI implementation.",
+          es: "Traduce tus operaciones en números. Mide líneas base de eficiencia, estima ahorros de tiempo y rastrea el ROI real de cada proceso e implementación de IA.",
+        },
+        tiers: ["Tier 3"],
+      },
+      {
+        role: { en: "Information Security Analyst", es: "Analista de Seguridad de la Información" },
+        specialty: { en: "ISO 27001 & Compliance Lead", es: "Líder de ISO 27001 y Cumplimiento" },
+        desc: {
+          en: "Ensures your processes and documentation are structured to ISO 27001 standards — so your business handles sensitive data correctly and stays audit-ready.",
+          es: "Garantiza que tus procesos y documentación estén estructurados según los estándares ISO 27001 — para que tu negocio maneje datos sensibles correctamente y esté listo para auditorías.",
+        },
+        tiers: ["Tier 2", "Tier 3"],
       },
     ],
   },
