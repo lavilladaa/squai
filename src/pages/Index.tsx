@@ -1,12 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import type { Lang } from "@/lib/content";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import ProblemSection from "@/components/ProblemSection";
+import ServicesSection from "@/components/ServicesSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import IndustriesSection from "@/components/IndustriesSection";
+import WhySquaiSection from "@/components/WhySquaiSection";
+import CtaSection from "@/components/CtaSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
+  const [lang, setLang] = useState<Lang>("en");
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Navbar lang={lang} setLang={setLang} />
+      <HeroSection lang={lang} />
+      <ProblemSection lang={lang} />
+      <ServicesSection lang={lang} />
+      <HowItWorksSection lang={lang} />
+      <IndustriesSection lang={lang} />
+      <WhySquaiSection lang={lang} />
+      <CtaSection lang={lang} />
+      <Footer lang={lang} setLang={setLang} />
     </div>
   );
 };
