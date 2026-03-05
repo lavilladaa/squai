@@ -1,6 +1,6 @@
 import { content, type Lang } from "@/lib/content";
 import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
+import { Check, Users } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 const ServicesSection = ({ lang }: { lang: Lang }) => {
@@ -33,8 +33,18 @@ const ServicesSection = ({ lang }: { lang: Lang }) => {
                   {tier.label[lang]}
                 </p>
                 <h3 className="font-headline font-black text-2xl mb-1">{tier.name[lang]}</h3>
-                <p className="text-muted-foreground font-body text-sm mb-6">{tier.duration[lang]}</p>
-                <ul className="space-y-3 mb-8 flex-1">
+                <p className="text-muted-foreground font-body text-sm mb-4">{tier.duration[lang]}</p>
+
+                {/* Pricing */}
+                <div className="mb-6">
+                  {tier.pricePrefix[lang] && (
+                    <p className="font-body font-semibold text-sm text-accent">{tier.pricePrefix[lang]}</p>
+                  )}
+                  <p className="font-headline font-black text-3xl text-primary">{tier.price}</p>
+                  <p className="font-body font-light text-xs text-muted-foreground mt-1">{tier.priceNote[lang]}</p>
+                </div>
+
+                <ul className="space-y-3 mb-6 flex-1">
                   {tier.items[lang].map((item, j) => (
                     <li key={j} className="flex items-start gap-3 text-muted-foreground font-body text-sm">
                       <Check className="text-primary mt-0.5 shrink-0" size={16} />
@@ -42,6 +52,13 @@ const ServicesSection = ({ lang }: { lang: Lang }) => {
                     </li>
                   ))}
                 </ul>
+
+                {/* Squad assigned */}
+                <div className="flex items-center gap-2 mb-6 text-[hsl(234,15%,50%)] font-body font-light text-sm italic">
+                  <Users size={14} className="shrink-0" />
+                  {tier.squadAssigned[lang]}
+                </div>
+
                 <Button variant={tier.popular ? "cta" : "heroGhost"} className="w-full" asChild>
                   <a href="#contact">{t.cta[lang]}</a>
                 </Button>
