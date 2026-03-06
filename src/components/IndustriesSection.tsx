@@ -11,7 +11,6 @@ const IndustriesSection = ({ lang }: { lang: Lang }) => {
     <section id="industries" className="py-24 bg-deep">
       <div className="container mx-auto px-4">
         <AnimatedSection>
-          // ...removed eyebrow label...
           <h2 className="font-headline font-black text-3xl md:text-5xl text-center mb-16">
             {t.title[lang]}
           </h2>

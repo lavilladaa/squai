@@ -29,7 +29,6 @@ const SquadSection = ({ lang }: { lang: Lang }) => {
 
       <div className="container mx-auto px-4 relative z-10">
         <AnimatedSection>
-          // ...removed eyebrow label...
           <h2 className="font-headline font-black text-3xl md:text-5xl text-center mb-4">
             {t.title[lang]}
           </h2>
