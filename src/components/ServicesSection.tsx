@@ -51,9 +51,7 @@ const ServicesSection = ({ lang }: { lang: Lang }) => {
                   <p className="text-accent font-body font-light text-sm italic mb-4">
                     {tier.partnership[lang]}
                   </p>
-                  <p className="text-muted-foreground font-body text-sm leading-relaxed mb-6">
-                    {tier.description[lang]}
-                  </p>
+                  {/* Removed intro paragraph below yellow sentence */}
 
                   {/* What you get */}
                   <p className="font-body font-semibold text-xs uppercase tracking-wider text-foreground mb-3">
@@ -90,7 +88,12 @@ const ServicesSection = ({ lang }: { lang: Lang }) => {
                   </div>
 
                   <Button variant={tier.popular ? "cta" : "heroGhost"} className="w-full" asChild>
-                    <a href="#contact">{tier.cta[lang]}</a>
+                    <a
+                      href="#contact"
+                      className="w-full font-body font-bold text-base bg-accent text-[#12152A] rounded-full py-3 px-6 transition-all duration-200 shadow-lg shadow-accent/25 hover:bg-accent/90 hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-accent/50"
+                    >
+                      {tier.cta[lang]}
+                    </a>
                   </Button>
                 </div>
               </div>
