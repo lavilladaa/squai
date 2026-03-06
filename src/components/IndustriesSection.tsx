@@ -8,10 +8,11 @@ const IndustriesSection = ({ lang }: { lang: Lang }) => {
   const t = content.industries;
 
   return (
-    <section id="industries" className="py-24">
+    <section id="industries" className="py-24 bg-deep">
       <div className="container mx-auto px-4">
         <AnimatedSection>
-          <h2 className="font-headline font-extrabold text-3xl md:text-4xl text-center mb-16">
+          <p className="eyebrow text-center">{t.eyebrow[lang]}</p>
+          <h2 className="font-headline font-black text-3xl md:text-5xl text-center mb-16">
             {t.title[lang]}
           </h2>
         </AnimatedSection>
@@ -22,7 +23,7 @@ const IndustriesSection = ({ lang }: { lang: Lang }) => {
               return (
                 <div
                   key={i}
-                  className="flex items-center gap-3 bg-card border border-border rounded-full px-6 py-3 hover:border-primary/40 hover:bg-primary/5 transition-all group cursor-default"
+                  className="flex items-center gap-3 bg-[#12152A] border border-[rgba(124,140,255,0.15)] rounded-full px-6 py-3 hover:border-primary/40 hover:bg-primary/5 transition-all duration-200 group cursor-default"
                 >
                   <Icon className="text-primary group-hover:text-accent transition-colors" size={18} />
                   <span className="font-body text-sm text-muted-foreground group-hover:text-foreground transition-colors">
