@@ -28,7 +28,7 @@ const HeroSection = ({ lang }: { lang: Lang }) => {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="w-24 h-1 gradient-bar mx-auto rounded-full mb-8 origin-left"
+          className="h-1 gradient-bar mx-auto rounded-full mb-8 origin-left"
         />
         <motion.p
           initial={{ opacity: 0, y: 20 }}
