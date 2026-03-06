@@ -231,7 +231,7 @@ export const content = {
     members: [
       {
         role: { en: "Operations Strategist", es: "Estratega de Operaciones" },
-        specialty: { en: "Engagement Lead", es: "Líder de Proyecto" },
+        specialty: { en: "Strategy & Direction", es: "Estrategia y Dirección" },
         desc: {
           en: "Diagnoses your business, defines the operational roadmap, and leads the engagement from start to finish. Translates your real problems into structured solutions — and makes sure everything the squad delivers is aligned to your actual goals, not just the symptoms.",
           es: "Diagnostica tu negocio, define la hoja de ruta operativa y lidera el proyecto de principio a fin. Traduce tus problemas reales en soluciones estructuradas — alineadas con tus objetivos reales, no solo con los síntomas.",
@@ -251,7 +251,7 @@ export const content = {
       },
       {
         role: { en: "Business Process Analyst", es: "Analista de Procesos de Negocio" },
-        specialty: { en: "Workflow & Strategy Lead", es: "Líder de Flujos y Estrategia" },
+        specialty: { en: "Process Design & Strategy", es: "Diseño y Estrategia de Procesos" },
         desc: {
           en: "Maps your real workflows, identifies bottlenecks, and aligns every process improvement to your actual business goals — not just what looks broken on the surface.",
           es: "Mapea tus flujos reales, identifica cuellos de botella y alinea cada mejora de proceso con tus objetivos reales de negocio — no solo lo que parece roto en la superficie.",
@@ -261,7 +261,7 @@ export const content = {
       },
       {
         role: { en: "Knowledge Manager", es: "Gestor de Conocimiento" },
-        specialty: { en: "Documentation & Systems Lead", es: "Líder de Documentación y Sistemas" },
+        specialty: { en: "Systems & Knowledge Design", es: "Diseño y Gestión de Conocimiento" },
         desc: {
           en: "Ensures all workflows, playbooks, and documentation are clear, structured, and accessible across your team's tools — so knowledge stays in systems, not in people's heads.",
           es: "Garantiza que todos los flujos, playbooks y documentación sean claros, estructurados y accesibles en las herramientas de tu equipo — para que el conocimiento viva en sistemas, no en cabezas.",
@@ -271,7 +271,7 @@ export const content = {
       },
       {
         role: { en: "Data Analyst", es: "Analista de Datos" },
-        specialty: { en: "Data & Integrity Lead", es: "Líder de Datos e Integridad" },
+        specialty: { en: "Data Integrity & Connections", es: "Integridad y Conexiones de Datos" },
         desc: {
           en: "Ensures your data flows correctly across your processes and tools. Validates data integrity, identifies where information is incomplete or misused, and makes sure your operations are built on reliable, well-connected data.",
           es: "Garantiza que tus datos fluyan correctamente a través de tus procesos y herramientas. Valida la integridad de los datos e identifica dónde la información está incompleta o mal usada.",
@@ -281,7 +281,7 @@ export const content = {
       },
       {
         role: { en: "Information Security Analyst", es: "Analista de Seguridad de la Información" },
-        specialty: { en: "Security & Compliance Lead", es: "Líder de Seguridad y Cumplimiento" },
+        specialty: { en: "Security & Risk Management", es: "Gestión de Seguridad y Riesgos" },
         desc: {
           en: "Ensures your processes, tools, and documentation follow information security best practices — so your business handles sensitive data responsibly and stays protected as it grows.",
           es: "Garantiza que tus procesos, herramientas y documentación sigan las mejores prácticas de seguridad de la información — para que tu negocio maneje datos sensibles de forma responsable y esté protegido a medida que crece.",
