@@ -2,21 +2,21 @@ import { content, type Lang } from "@/lib/content";
 import AnimatedSection from "./AnimatedSection";
 
 const borderColorMap: Record<string, string> = {
-  primary: "border-l-[hsl(233,100%,74%)]",
-  accent: "border-l-[hsl(43,87%,63%)]",
-  secondary: "border-l-[hsl(175,58%,55%)]",
+  primary: "border-l-[#7C8CFF]",
+  accent: "border-l-[#7C8CFF]",
+  secondary: "border-l-[#7C8CFF]",
 };
 
 const pillColorMap: Record<string, string> = {
-  primary: "border-[rgba(124,140,255,0.3)] text-primary",
-  accent: "border-[rgba(124,140,255,0.3)] text-primary",
-  secondary: "border-[hsl(175,58%,55%,0.3)] text-secondary",
+  primary: "border-[rgba(68,212,200,0.3)] text-[#44D4C8]",
+  accent: "border-[rgba(68,212,200,0.3)] text-[#44D4C8]",
+  secondary: "border-[rgba(68,212,200,0.3)] text-[#44D4C8]",
 };
 
 const hoverGlowMap: Record<string, string> = {
-  primary: "hover:shadow-[0_0_25px_-5px_hsl(233,100%,74%,0.15)]",
-  accent: "hover:shadow-[0_0_25px_-5px_hsl(43,87%,63%,0.15)]",
-  secondary: "hover:shadow-[0_0_25px_-5px_hsl(175,58%,55%,0.15)]",
+  primary: "hover:shadow-[0_0_25px_-5px_#7C8CFF]",
+  accent: "hover:shadow-[0_0_25px_-5px_#7C8CFF]",
+  secondary: "hover:shadow-[0_0_25px_-5px_#7C8CFF]",
 };
 
 const SquadSection = ({ lang }: { lang: Lang }) => {
@@ -29,7 +29,7 @@ const SquadSection = ({ lang }: { lang: Lang }) => {
 
       <div className="container mx-auto px-4 relative z-10">
         <AnimatedSection>
-          <p className="eyebrow text-center">{t.eyebrow[lang]}</p>
+          // ...removed eyebrow label...
           <h2 className="font-headline font-black text-3xl md:text-5xl text-center mb-4">
             {t.title[lang]}
           </h2>

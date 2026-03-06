@@ -11,7 +11,7 @@ const WhySquaiSection = ({ lang }: { lang: Lang }) => {
     <section className="py-24 bg-surface">
       <div className="container mx-auto px-4">
         <AnimatedSection>
-          <p className="eyebrow text-center">{t.eyebrow[lang]}</p>
+          // ...removed eyebrow label...
           <h2 className="font-headline font-black text-3xl md:text-5xl text-center mb-16">
             {t.title[lang]}
           </h2>
