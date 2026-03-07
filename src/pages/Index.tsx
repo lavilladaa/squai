@@ -20,10 +20,10 @@ const Index = () => {
       <HeroSection lang={lang} />
       <ProblemSection lang={lang} />
       <ServicesSection lang={lang} />
+      <SquadSection lang={lang} />
       <HowItWorksSection lang={lang} />
       <IndustriesSection lang={lang} />
       <WhySquaiSection lang={lang} />
-      <SquadSection lang={lang} />
       <CtaSection lang={lang} />
       <Footer lang={lang} setLang={setLang} />
     </div>

@@ -91,10 +91,6 @@ const HowItWorksSection = ({ lang }: { lang: Lang }) => {
               <div className="font-body text-sm text-[#A8AECE] leading-relaxed">{stepDescriptions[lang][i]}</div>
             </motion.div>
           ))}
-          {/* Gradient line between rows */}
-          <div className="col-span-3 flex justify-center items-center mt-0 mb-0" style={{ gridRow: 2 }}>
-            <div className="w-full h-1 bg-gradient-to-r from-[#7C8CFF] via-[#44D4C8] to-transparent rounded-full opacity-70" />
-          </div>
         </div>
 
         {/* Mobile: stacked cards */}
