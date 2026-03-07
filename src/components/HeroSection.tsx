@@ -2,6 +2,41 @@ import { content, type Lang } from "@/lib/content";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
+const orbs = [
+  {
+    size: 420,
+    x: "-10%",
+    y: "-20%",
+    color: "hsl(233 100% 74% / 0.12)",
+    duration: 14,
+    delay: 0,
+  },
+  {
+    size: 320,
+    x: "70%",
+    y: "10%",
+    color: "hsl(43 87% 63% / 0.09)",
+    duration: 18,
+    delay: 2,
+  },
+  {
+    size: 260,
+    x: "20%",
+    y: "60%",
+    color: "hsl(175 58% 55% / 0.08)",
+    duration: 16,
+    delay: 4,
+  },
+  {
+    size: 200,
+    x: "80%",
+    y: "65%",
+    color: "hsl(233 100% 74% / 0.07)",
+    duration: 20,
+    delay: 1,
+  },
+];
+
 const HeroSection = ({ lang }: { lang: Lang }) => {
   const t = content.hero;
   const headline = t.headline[lang];
@@ -11,8 +46,33 @@ const HeroSection = ({ lang }: { lang: Lang }) => {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center pt-16 overflow-hidden">
       <div className="absolute inset-0 glow-radial" />
-      {/* Floating glow orbs */}
-      {/* Removed shape and watermark SVG for clean hero background */}
+
+      {/* Floating orbs */}
+      {orbs.map((orb, i) => (
+        <motion.div
+          key={i}
+          className="absolute rounded-full pointer-events-none"
+          style={{
+            width: orb.size,
+            height: orb.size,
+            left: orb.x,
+            top: orb.y,
+            background: `radial-gradient(circle, ${orb.color} 0%, transparent 70%)`,
+            filter: "blur(40px)",
+          }}
+          animate={{
+            y: ["0%", "4%", "-4%", "0%"],
+            x: ["0%", "3%", "-2%", "0%"],
+            scale: [1, 1.05, 0.97, 1],
+          }}
+          transition={{
+            duration: orb.duration,
+            delay: orb.delay,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      ))}
 
       <div className="container mx-auto px-4 text-center relative z-10 max-w-4xl">
         <motion.h1
