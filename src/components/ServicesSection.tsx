@@ -1,7 +1,7 @@
 import { content, type Lang } from "@/lib/content";
 import { Button } from "@/components/ui/button";
 import { Check, Users, Clock } from "lucide-react";
-import AnimatedSection from "./AnimatedSection";
+import { motion } from "framer-motion";
 
 const borderColors: Record<string, string> = {
   primary: "border-t-[hsl(233,100%,74%)]",
@@ -15,23 +15,35 @@ const hoverGlows: Record<string, string> = {
   secondary: "hover:shadow-[0_0_30px_-5px_hsl(175,58%,55%,0.15)]",
 };
 
+const slideDirections = [-1, 0, 1]; // left, center, right
+
 const ServicesSection = ({ lang }: { lang: Lang }) => {
   const t = content.services;
 
   return (
     <section id="services" className="py-24 bg-deep relative overflow-hidden">
-      {/* Floating glow orb */}
       <div className="glow-orb-primary w-[500px] h-[500px] -top-40 -right-40" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <AnimatedSection>
-          <h2 className="font-headline font-black text-3xl md:text-5xl text-center mb-16">
-            {t.title[lang]}
-          </h2>
-        </AnimatedSection>
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="font-headline font-black text-3xl md:text-5xl text-center mb-16"
+        >
+          {t.title[lang]}
+        </motion.h2>
+
         <div className="grid lg:grid-cols-3 gap-6 max-w-7xl mx-auto items-start">
           {t.tiers.map((tier, i) => (
-            <AnimatedSection key={i} delay={i * 0.12}>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: slideDirections[i] * 80 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.65, delay: i * 0.15, ease: "easeOut" }}
+            >
               <div
                 className={`relative bg-[#12152A] rounded-xl border border-[rgba(124,140,255,0.15)] hover:border-[rgba(124,140,255,0.4)] border-t-4 ${borderColors[tier.borderColor]} ${hoverGlows[tier.borderColor]} transition-all duration-200 hover:-translate-y-1 h-full flex flex-col ${
                   tier.popular ? "lg:scale-[1.03]" : ""
@@ -51,9 +63,7 @@ const ServicesSection = ({ lang }: { lang: Lang }) => {
                   <p className="text-accent font-body font-light text-sm italic mb-4">
                     {tier.partnership[lang]}
                   </p>
-                  {/* Removed intro paragraph below yellow sentence */}
 
-                  {/* What you get */}
                   <p className="font-body font-semibold text-xs uppercase tracking-wider text-foreground mb-3">
                     {lang === "en" ? "What you get:" : "Lo que obtienes:"}
                   </p>
@@ -66,13 +76,11 @@ const ServicesSection = ({ lang }: { lang: Lang }) => {
                     ))}
                   </ul>
 
-                  {/* Duration */}
                   <div className="flex items-center gap-2 mb-4 text-muted-foreground font-body text-sm">
                     <Clock size={14} className="text-primary shrink-0" />
                     {tier.duration[lang]}
                   </div>
 
-                  {/* Pricing */}
                   <div className="mb-4">
                     {tier.pricePrefix[lang] && (
                       <p className="font-body font-semibold text-sm text-accent">{tier.pricePrefix[lang]}</p>
@@ -81,7 +89,6 @@ const ServicesSection = ({ lang }: { lang: Lang }) => {
                     <p className="font-body font-light text-xs text-muted-foreground mt-1">{tier.priceNote[lang]}</p>
                   </div>
 
-                  {/* Squad assigned */}
                   <div className="flex items-center gap-2 mb-6 text-[#666E9A] font-body font-light text-sm italic">
                     <Users size={14} className="shrink-0" />
                     {tier.squadAssigned[lang]}
@@ -92,7 +99,7 @@ const ServicesSection = ({ lang }: { lang: Lang }) => {
                   </Button>
                 </div>
               </div>
-            </AnimatedSection>
+            </motion.div>
           ))}
         </div>
       </div>
